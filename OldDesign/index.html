@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--& ================== Title of Page ================== &-->
+    <title>Bookmarker</title>
+    <!--& ================== Start Meta Tags ================== &-->
+    <meta
+      name="description"
+      content="A landing page save all links in localstorage, using modern UI"
+    />
+    <meta name="keywords" content="Bookmarker, save links " />
+    <!--& ==================  End Meta Tags  ================== &-->
+    <!--& ==================  Icon of the page in header  ================== &-->
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
+    <!--& ================== Start CSS Links ================== &-->
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+    <!--& ==================  End CSS Links  ================== &-->
+  </head>
+  <body>
+    <section class="py-5">
+      <div class="container">
+        <!--& ==================  Start Form of Add Bookmark  ================== &-->
+        <div class="title d-flex flex-wrap justify-content-center mb-5">
+          <h1>Bookmarker</h1>
+        </div>
+        <div
+          class="add-bookmarker-form d-flex flex-wrap flex-column align-items-center py-4"
+        >
+          <h2>
+            <i class="fa-solid fa-bookmark"></i>
+            Bookmark your favorite sites
+            <i class="fa-solid fa-bookmark"></i>
+          </h2>
+          <div class="form w-100 d-flex flex-wrap flex-column gap-3">
+            <div class="mb-3">
+              <label for="bookmarkerName" class="form-label">
+                <i class="fa-solid fa-book-bookmark pe-2"></i>
+                Site Name</label
+              >
+              <input
+                type="text"
+                class="form-control"
+                id="bookmarkerName"
+                placeholder="Bookmark Name"
+                oninput="validation(this)"
+              />
+            </div>
+            <div class="mb-3">
+              <label for="bookmarkerURL" class="form-label">
+                <i class="fa-solid fa-link pe-2"></i>
+                Site URL</label
+              >
+              <input
+                type="url"
+                class="form-control"
+                id="bookmarkerURL"
+                placeholder="Website URL"
+                oninput="validation(this)"
+              />
+            </div>
+            <button
+              class="btn my-btn-submit px-5 mx-auto"
+              onclick="CreateBookmarker()"
+            >
+              Submit
+            </button>
+          </div>
+        </div>
+        <!--& ==================   End Form of Add Bookmark  ================== &-->
+        <!--& ==================   Start Display all of Bookmarks ================== &-->
+        <div>
+          <table class="table mt-4 text-center">
+            <thead>
+              <tr>
+                <th scope="col text-uppercase">index</th>
+                <th scope="col text-uppercase">Website Name</th>
+                <th scope="col text-uppercase">Visit</th>
+                <th scope="col text-uppercase">Delete</th>
+              </tr>
+            </thead>
+            <tbody id="bookmarkerContainer"></tbody>
+          </table>
+        </div>
+        <!--& ==================   End Display all of Bookmarks ================== &-->
+      </div>
+    </section>
+    <!--& ==================   Change the theme ================== &-->
+    <a href="../index.html" class="btn themes"
+      ><i class="fa-solid fa-palette"></i
+    ></a>
+    <!--& ================== Start JS Links ================== &-->
+    <script src="
+        https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.all.min.js
+        "></script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!--& ================== End JS Links ================== &-->
+  </body>
+</html>

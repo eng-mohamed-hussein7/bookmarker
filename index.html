@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--& ================== Title of Page ================== &-->
+    <title>Bookmarker</title>
+    <!--& ================== Start Meta Tags ================== &-->
+    <meta
+      name="description"
+      content="A landing page save all links in localstorage, using modern UI"
+    />
+    <meta name="keywords" content="Bookmarker, save links " />
+    <!--& ==================  End Meta Tags  ================== &-->
+    <!--& ==================  Icon of the page in header  ================== &-->
+    <link rel="shortcut icon" href="./image/favicon.ico" type="image/x-icon" />
+    <!--& ================== Start CSS Links ================== &-->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <!--& ==================  End CSS Links  ================== &-->
+  </head>
+  <body>
+    <header class="hero">
+      <div class="container">
+        <!--& ==================  Start Form of Add Bookmark  ================== &-->
+        <div class="row">
+          <div class="form-box p-1 mt-5 mx-auto">
+            <div class="inner d-flex flex-wrap flex-column p-5">
+              <div class="m-4 text-center">
+                <h1 class="mb-3">Bookmark</h1>
+                <h2>Bookmark your favorite sites</h2>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  id="bookmarkerName"
+                  placeholder="Enter Your Site Name"
+                  oninput="validation(this)"
+                />
+                <label for="bookmarkerName">
+                  <i class="fa-solid fa-book-bookmark pe-2"></i> Site
+                  Name</label
+                >
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="url"
+                  class="form-control"
+                  id="bookmarkerURL"
+                  placeholder="Site URL"
+                  oninput="validation(this)"
+                />
+                <label for="bookmarkerURL">
+                  <i class="fa-solid fa-link pe-2"></i> Website URL</label
+                >
+              </div>
+              <button
+                id="btnCreateBookmarker"
+                type="button"
+                class="btn my-submit-btn fs-5"
+                onclick="CreateBookmarker()"
+              >
+                <i class="fa-solid fa-plus pe-2"></i> Save
+              </button>
+              <button
+                id="btnUpdateBookmarker"
+                type="button"
+                class="btn my-update-btn fs-5 d-none"
+                onclick="UpdateBookmarker()"
+              >
+                <i class="fa-solid fa-pencil pe-2"></i>
+                UPDATE
+              </button>
+            </div>
+          </div>
+        </div>
+        <!--& ==================   End Form of Add Bookmark  ================== &-->
+        <!--& ==================   Start Display all of Bookmarks ================== &-->
+        <div class="row py-5">
+          <table
+            class="table table-dark table-striped table-hover table-borderless text-center"
+          >
+            <thead>
+              <tr>
+                <th class="rounded-start-5" scope="col">#</th>
+                <th scope="col">Site Name</th>
+                <th class="rounded-end-5 my-w-35 my-w-sm-60" scope="col">
+                  Action
+                </th>
+              </tr>
+            </thead>
+            <tbody id="bookmarkerContainer"></tbody>
+          </table>
+        </div>
+        <!--& ==================   End Display all of Bookmarks ================== &-->
+      </div>
+    </header>
+    <!--& ==================   Change the theme ================== &-->
+    <a href="./OldDesign/index.html" class="btn themes"
+      ><i class="fa-solid fa-palette"></i
+    ></a>
+    
+    <!--& ================== Start JS Links ================== &-->
+    <!--& ================== CDN sweet alert ================== &-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.23.0/dist/sweetalert2.all.min.js"></script>
+    <!--& ================== CDN QR Generator ================== &-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <!--& ==================  End JS Links ================== &-->
+  </body>
+</html>

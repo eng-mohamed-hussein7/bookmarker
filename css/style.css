@@ -1,0 +1,117 @@
+/*********************************************** Start Fonts  ***********************************************/
+@font-face {
+  font-family: Kalam-Bold;
+  src: url(./fonts/Kalam-Bold.ttf);
+}
+@font-face {
+  font-family: Kalam-Light;
+  src: url(./fonts/Kalam-Light.ttf);
+}
+@font-face {
+  font-family: Kalam-Regular;
+  src: url(./fonts/Kalam-Regular.ttf);
+}
+/*********************************************** end Fonts  ***********************************************/
+.hero {
+  background-image: url(../image/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  font-family: Kalam-Regular, serif;
+}
+::selection {
+  background-color: #d9138a;
+  color: #fff;
+}
+/*********************************************** Headers Style  ***********************************************/
+h1,
+th {
+  font-family: Kalam-Bold, cursive;
+  color: #45f3ff !important;
+}
+h2 {
+  color: #ffffff59;
+}
+
+/*********************************************** Form Style  ***********************************************/
+.inner {
+  position: relative;
+  background-color: #212529;
+  z-index: 5;
+  border-radius: 50px 5px;
+}
+.form-box {
+  position: relative;
+  overflow: hidden;
+  border-radius: 50px 5px;
+}
+.form-box::after,
+.form-box::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -180%;
+  right: 50%;
+  bottom: 50%;
+  background-image: linear-gradient(60deg, transparent, #45f3ff, #45f3ff);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+.form-box::after {
+  background: linear-gradient(60deg, transparent, #d9138a, #d9138a);
+  animation-delay: -3s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form-control:focus {
+  border-color: #d9138a;
+  box-shadow: 0 0 0 0.25rem rgba(217, 19, 138, 0.2);
+}
+/***********************************************  start custom button   ***********************************************/
+.my-submit-btn {
+  --bs-btn-color: #fefefe;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #d9138a;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d9138a;
+  --bs-btn-hover-border-color: transparent;
+}
+.my-update-btn {
+  --bs-btn-color: #ffc107;
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: #ffc107;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d9138a;
+  --bs-btn-hover-border-color: transparent;
+}
+/***********************************************   End custom button    ***********************************************/
+/***********************************************  change theme button   ***********************************************/
+.themes {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #d9138a;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+/***********************************************  Table enhancement   ***********************************************/
+td, th {
+  vertical-align: middle;
+}
+
+.my-w-35 {
+  width: 35%;
+}

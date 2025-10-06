@@ -1,0 +1,8 @@
+@media screen and (max-width: 576px) {
+.my-w-sm-60{
+    width: 60%;
+}
+.form-box {
+    width: 90%;
+}
+}

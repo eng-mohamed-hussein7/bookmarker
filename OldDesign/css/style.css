@@ -1,0 +1,121 @@
+/*********************************************** Start Fonts  ***********************************************/
+@font-face {
+  font-family: Pacifico;
+  src: url(../fonts/Pacifico/Pacifico-Regular.ttf);
+}
+@font-face {
+  font-family: Righteous;
+  src: url(../fonts/Righteous/Righteous-Regular.ttf);
+}
+@font-face {
+  font-family: PTSansCaption;
+  src: url(../fonts/PT_Sans_Caption/PTSansCaption-Regular.ttf);
+}
+@font-face {
+  font-family: PTSansCaptionBold;
+  src: url(../fonts/PT_Sans_Caption/PTSansCaption-Bold.ttf);
+}
+/***********************************************  End Fonts   ***********************************************/
+body {
+  background-color: #f7ecde;
+  font-family: PTSansCaption, sans-serif;
+}
+::selection {
+  background-color: #fec260;
+  color: #352e28;
+}
+h1:hover::after {
+  top: 30%;
+}
+h1 {
+  font-family: Pacifico, cursive;
+  position: relative;
+  width: fit-content;
+  font-size: 3.125rem;
+  color: #352e28;
+}
+h1::after {
+  content: "";
+  top: 66%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #fec260;
+  position: absolute;
+  z-index: -55;
+  transition: top 0.5s ease-in-out;
+}
+
+h2 {
+  font-size: 1.5625rem;
+  font-family: Righteous, cursive;
+  background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+  background-clip: inherit;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.add-bookmarker-form {
+  border-top: 2px dotted #352e28;
+  border-bottom: 2px dotted #352e28;
+}
+
+.add-bookmarker-form .form label {
+  font-family: PTSansCaptionBold, sans-serif;
+}
+/***********************************************  start custom button   ***********************************************/
+.my-btn-delete {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #eb1d36;
+  --bs-btn-border-color: #eb1d36;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #d30820;
+  --bs-btn-hover-border-color: #ba081d;
+}
+
+.my-btn-submit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #d1512d;
+  --bs-btn-border-color: #d1512d;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #bb4120;
+  --bs-btn-hover-border-color: #a03315;
+}
+
+.my-btn-visit {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: #9eb23b;
+  --bs-btn-border-color: #9eb23b;
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: #8a9e23;
+  --bs-btn-hover-border-color: #6e8018;
+}
+
+/***********************************************   end custom button   ***********************************************/
+/***********************************************  Start custom input   ***********************************************/
+.form-control:focus {
+  color: #212529;
+  background-color: #fff;
+  border-color: #d99c39;
+  outline: 0;
+  box-shadow: 0 0 0 0.25rem #fec26055;
+}
+/***********************************************    End custom input    ***********************************************/
+/***********************************************  change theme button   ***********************************************/
+.themes {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #9eb23b;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+/***********************************************  Table enhancement   ***********************************************/
+td, th {
+  vertical-align: middle;
+}
