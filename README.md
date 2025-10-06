@@ -34,8 +34,8 @@ Built using **HTML**, **CSS**, **Bootstrap**, and **JavaScript**, with data stor
 
 ## 🎨 Live Demo
 
-| Version | Preview | Link |
-|----------|----------|------|
+| Version | Link |
+|----------|------|
 | 🆕 **Modern Design (Current)** | 🔗 [Open Live Demo](https://eng-mohamed-hussein7.github.io/bookmarker/index.html) |
 | 🕰️ **Old Design (Legacy)** | 🔗 [Open Old Version](https://eng-mohamed-hussein7.github.io/bookmarker/OldDesign/index.html) |
 
