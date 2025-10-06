@@ -36,8 +36,8 @@ Built using **HTML**, **CSS**, **Bootstrap**, and **JavaScript**, with data stor
 
 | Version | Preview | Link |
 |----------|----------|------|
-| 🆕 **Modern Design (Current)** | ![Modern](https://img.shields.io/badge/Demo-New%20Design-blue?style=for-the-badge) | 🔗 [Open Live Demo](https://eng-mohamed-hussein7.github.io/bookmarker/index.html) |
-| 🕰️ **Old Design (Legacy)** | ![Old](https://img.shields.io/badge/Demo-Old%20Design-gray?style=for-the-badge) | 🔗 [Open Old Version](https://eng-mohamed-hussein7.github.io/bookmarker/OldDesign/index.html) |
+| 🆕 **Modern Design (Current)** | 🔗 [Open Live Demo](https://eng-mohamed-hussein7.github.io/bookmarker/index.html) |
+| 🕰️ **Old Design (Legacy)** | 🔗 [Open Old Version](https://eng-mohamed-hussein7.github.io/bookmarker/OldDesign/index.html) |
 
 ---
 
