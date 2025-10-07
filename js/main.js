@@ -57,6 +57,12 @@ function CreateBookmarker() {
   }
 }
 function DisplayBookmarker(array) {
+  if (array.length > 0) {
+    document.getElementById("TableHeader").classList.remove("d-none");
+  }
+  else{
+    document.getElementById("TableHeader").classList.add("d-none");
+  }
   var data = "";
   for (var i = 0; i < array.length; i++) {
     data += `              
