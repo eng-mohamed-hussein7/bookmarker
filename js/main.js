@@ -59,8 +59,7 @@ function CreateBookmarker() {
 function DisplayBookmarker(array) {
   if (array.length > 0) {
     document.getElementById("TableHeader").classList.remove("d-none");
-  }
-  else{
+  } else {
     document.getElementById("TableHeader").classList.add("d-none");
   }
   var data = "";
@@ -209,7 +208,7 @@ function ShareBookmarker(index) {
 // ========================================== Start validation Method ========================================== //
 function validation(element) {
   var regex = {
-    bookmarkerName: /^[A-Z]\w{2,}(\s+\w+)*$/,
+    bookmarkerName: /^\w{3,}(\s+\w+)*$/,
     bookmarkerURL:
       /^(https?:\/\/)?(www\.)?[\w\-]+(\.[\w\-]+)+(:\d{1,5})?(\/[\w\-._~:\/?#[\]@!$&'()*+,;%=]*)?$/,
   };
