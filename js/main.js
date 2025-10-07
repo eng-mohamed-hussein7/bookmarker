@@ -128,6 +128,9 @@ function DeleteBookmarker(index) {
     title: "Are you sure?",
     text: "You won't be able to revert this!",
     icon: "warning",
+    color: "#45f3ff ",
+    confirmButtonColor: "#d9138a",
+    background: "#212529",
     showCancelButton: true,
     confirmButtonColor: "#3085d6",
     cancelButtonColor: "#d33",
@@ -138,6 +141,9 @@ function DeleteBookmarker(index) {
       DisplayBookmarker(arrayOfBookmarkers);
       localStorage.setItem("bookmarker", JSON.stringify(arrayOfBookmarkers));
       Swal.fire({
+        color: "#45f3ff ",
+        confirmButtonColor: "#d9138a",
+        background: "#212529",
         title: "Deleted!",
         text: "Your bookmarker has been deleted.",
         icon: "success",
@@ -152,46 +158,45 @@ function DeleteBookmarker(index) {
 function ShareBookmarker(index) {
   var url = arrayOfBookmarkers[index].url;
 
-Swal.fire({
-  title: "Share Your Bookmark",
-  color: "#45f3ff ",
-  confirmButtonColor: "#d9138a",
-  background: "#212529",
-  html: `
+  Swal.fire({
+    title: "Share Your Bookmark",
+    color: "#45f3ff ",
+    confirmButtonColor: "#d9138a",
+    background: "#212529",
+    html: `
     <div id="swal-qr" class="d-flex justify-content-center mb-2"></div>
     <p id="swal-url" class="text-white-50">${url}</p>
     <button id="copy-btn" class="btn btn-sm btn-outline-info mt-2">
       <i class="fa-solid fa-copy me-1"></i> Copy to Clipboard
     </button>
   `,
-  didOpen: () => {
-    var container = document.getElementById("swal-qr");
-    container.innerHTML = "";
-    new QRCode(container, {
-      text: url,
-      width: 200,
-      height: 200,
-      colorDark: "#fff",
-      colorLight: "#212529",
-      correctLevel: QRCode.CorrectLevel.H,
-    });
-
-    const copyBtn = document.getElementById("copy-btn");
-    copyBtn.addEventListener("click", () => {
-      navigator.clipboard.writeText(url).then(() => {
-        copyBtn.innerHTML = `<i class="fa-solid fa-check me-1"></i> Copied!`;
-        copyBtn.classList.remove("btn-primary");
-        copyBtn.classList.add("btn-success");
-        setTimeout(() => {
-          copyBtn.innerHTML = `<i class="fa-solid fa-copy me-1"></i> Copy to Clipboard`;
-          copyBtn.classList.remove("btn-success");
-          copyBtn.classList.add("btn-primary");
-        }, 1500);
+    didOpen: () => {
+      var container = document.getElementById("swal-qr");
+      container.innerHTML = "";
+      new QRCode(container, {
+        text: url,
+        width: 200,
+        height: 200,
+        colorDark: "#fff",
+        colorLight: "#212529",
+        correctLevel: QRCode.CorrectLevel.H,
       });
-    });
-  },
-});
 
+      const copyBtn = document.getElementById("copy-btn");
+      copyBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText(url).then(() => {
+          copyBtn.innerHTML = `<i class="fa-solid fa-check me-1"></i> Copied!`;
+          copyBtn.classList.remove("btn-primary");
+          copyBtn.classList.add("btn-success");
+          setTimeout(() => {
+            copyBtn.innerHTML = `<i class="fa-solid fa-copy me-1"></i> Copy to Clipboard`;
+            copyBtn.classList.remove("btn-success");
+            copyBtn.classList.add("btn-primary");
+          }, 1500);
+        });
+      });
+    },
+  });
 }
 // ========================================== End Share link method ========================================== //
 
